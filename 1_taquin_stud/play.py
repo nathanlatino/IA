@@ -20,8 +20,8 @@ def search(init, final_values):
 			if(new not in history) and new.legal():
 				frontiere.insert(0, new)
 				# frontiere.append(new)
-	print("History length: {}".format(len(history)))
-	print("Frontiere length: {}".format(len(frontiere)))
+	print(f"History length: {format(len(history))}")
+	print(f"Frontiere length: {format(len(frontiere))}")
 	return None
 
 
@@ -37,7 +37,7 @@ if __name__ == '__main__':
 		[7, 4, 3],
 		[5, 8, 6]
 	]
-	
+
 	taquin_hard = [
 		[4, 0, 2],
 		[3, 5, 1],
