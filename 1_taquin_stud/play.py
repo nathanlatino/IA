@@ -1,6 +1,10 @@
 from state_modele import State
 from taquin_viewer import TaquinViewerHTML
 
+def print_len(history, frontiere):
+	print(f"History len: {len(history)}")
+	print(f"Frontiere len: {len(frontiere)}")
+
 def search(init, final_values):
 	frontiere = []
 	frontiere.append(init)
@@ -10,8 +14,7 @@ def search(init, final_values):
 		etat = frontiere.pop()
 		history.add(etat)
 		if etat.final(final_values):
-			print("History length: {}".format(len(history)))
-			print("Frontiere length: {}".format(len(frontiere)))
+			print_len(history, frontiere)
 			return etat
 		ops = etat.applicable_operators()
 		for op in ops:
@@ -20,8 +23,7 @@ def search(init, final_values):
 			if(new not in history) and new.legal():
 				frontiere.insert(0, new)
 				# frontiere.append(new)
-	print(f"History length: {format(len(history))}")
-	print(f"Frontiere length: {format(len(frontiere))}")
+	print_len(history,frontiere)
 	return None
 
 
