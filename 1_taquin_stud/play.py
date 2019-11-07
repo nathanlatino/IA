@@ -1,4 +1,4 @@
-from state_modele import State
+from state import State
 from taquin_viewer import TaquinViewerHTML
 
 def print_len(history, frontiere):

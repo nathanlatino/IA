@@ -72,9 +72,6 @@ class Astar:
 			return -1
 
 
-
-
-
 	@staticmethod
 	def show(res):
 		'''affiche le résultat du astar'''
